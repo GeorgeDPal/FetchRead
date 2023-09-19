@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Books{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/books.css' %}">
+    <h2>Books</h2>
+    
+    <!-- List of Books -->
+    <div id="book-list">
+        <!-- Book items will be displayed here -->
+    </div>
+
+    <script src="{% static 'js/books.js' %}"></script>
+
+{% endblock %}

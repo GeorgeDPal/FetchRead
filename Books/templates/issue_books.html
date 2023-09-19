@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Issue Books{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/issue_books.css' %}">
+    <h2>Issue Books</h2>
+    
+    <!-- Issue Books Form -->
+    <form id="issue-form">
+        {% csrf_token %}
+        
+        <label for="username">Member Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="isbn">Book ISBN:</label>
+        <input type="text" id="isbn" name="isbn" required>
+        
+        <button type="button" id="issue-button">Issue Book</button>
+    </form>
+    
+    <div id="message-container"></div>
+    
+    <script src="{% static 'js/issue_books.js' %}"></script>
+{% endblock %}

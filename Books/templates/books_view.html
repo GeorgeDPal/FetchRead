@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}View Books{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/books_view.css' %}">
+    <h2>View Books</h2>
+    
+    <!-- Search Form -->
+    <form id="search-form">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title">
+        
+        <label for="authors">Authors:</label>
+        <input type="text" id="authors" name="authors">
+        
+        <button type="submit">Search</button>
+    </form>
+    
+    <!-- List of Books -->
+    <div id="book-list">
+        <!-- Book items will be displayed here -->
+    </div>
+
+    <script src="{% static 'js/books_view.js' %}"></script>
+    
+    <script>
+        // JavaScript for dynamic book search and display
+        const searchForm = document.getElementById('search-form');
+        const bookList = document.getElementById('book-list');
+        
+        searchForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            
+            // Retrieve search criteria
+            const title = document.getElementById('title').value;
+            const authors = document.getElementById('authors').value;
+            
+            // Construct the URL for fetching book data based on search criteria
+            const url = `/get_books/?title=${title}&authors=${authors}`;
+            
+            // Fetch book data from the server
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    // Update the book list with the retrieved data
+                    bookList.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+{% endblock %}

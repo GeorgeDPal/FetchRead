@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Return Books{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/return_books.css' %}">
+    <h2>Return Books</h2>
+    
+    <!-- Return Form -->
+    <form id="return-form">
+        <label for="username">Member Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="isbn">Book ISBN:</label>
+        <input type="text" id="isbn" name="isbn" required>
+        
+        <button type="submit">Return Book</button>
+    </form>
+    
+    <!-- Return Status -->
+    <div id="return-status"></div>
+    <script src="{% static 'js/return_books.js' %}"></script>
+
+{% endblock %}

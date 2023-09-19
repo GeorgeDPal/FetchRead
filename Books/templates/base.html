@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Library Management System{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <nav>
+            <ul>
+                <!-- Add data-url attribute to each navigation link -->
+                <li><a href="{% url 'add_book' %}" data-url="{% url 'add_book' %}">Add Book</a></li>
+                <li><a href="{% url 'get_books' %}" data-url="{% url 'get_books' %}">Get Books from API</a></li>
+                <li><a href="{% url 'add_member' %}" data-url="{% url 'add_member' %}">Add Member</a></li>
+                <li><a href="{% url 'issue_books' %}" data-url="{% url 'issue_books' %}">Issue Books</a></li>
+                <li><a href="{% url 'return_books' %}" data-url="{% url 'return_books' %}">Return Books</a></li>
+                <li><a href="{% url 'view_books' %}" data-url="{% url 'view_books' %}">Books</a></li>
+                <li><a href="{% url 'view_members' %}" data-url="{% url 'view_members' %}">Members</a></li>
+                <li><a href="{% url 'view_transactions' %}" data-url="{% url 'view_transactions' %}">Transactions</a></li>
+                <!-- Add more navigation links here -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Welcome to the Library Management System</h2>
+        <p>
+            This system allows you to manage books, members, and transactions in your library.
+        </p>
+        <p>Choose an option from the navigation menu above to get started.</p>
+    </main>
+
+    <footer>
+        <p>&copy; {% now "Y" %} Library Management System</p>
+    </footer>
+
+    <script src="{% static 'js/base.js' %}"></script>
+</body>
+</html>

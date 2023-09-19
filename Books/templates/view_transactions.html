@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+  <h2>View Transactions</h2>
+
+  <!-- Filter Form -->
+  <form method="post" id="filter-form">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="member">Member:</label>
+      <input type="text" class="form-control" id="member" name="member">
+    </div>
+    <div class="form-group">
+      <label for="book">Book:</label>
+      <input type="text" class="form-control" id="book" name="book">
+    </div>
+    <div class="form-group">
+      <label for="action">Action:</label>
+      <select class="form-control" id="action" name="action">
+        <option value="">All</option>
+        <option value="issue">Issue</option>
+        <option value="return">Return</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Filter</button>
+  </form>
+
+  <!-- Transaction List -->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Member</th>
+        <th>Book</th>
+        <th>Action</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody id="transaction-list">
+      <!-- Transactions will be dynamically loaded here -->
+    </tbody>
+  </table>
+
+  <script src="{% static 'js/view_transactions.js' %}"></script>
+
+</div>
+{% endblock %}

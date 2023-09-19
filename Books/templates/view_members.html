@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/view_members.css' %}">
+  <h2>View Members</h2>
+
+  <!-- Search Form -->
+  <form method="post" id="search-form">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="first_name">First Name:</label>
+      <input type="text" class="form-control" id="first_name" name="first_name">
+    </div>
+    <div class="form-group">
+      <label for="last_name">Last Name:</label>
+      <input type="text" class="form-control" id="last_name" name="last_name">
+    </div>
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username" name="username">
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+
+  <!-- Member List -->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for member in members %}
+        <tr>
+          <td>{{ member.first_name }}</td>
+          <td>{{ member.last_name }}</td>
+          <td>{{ member.username }}</td>
+          <td>{{ member.email }}</td>
+          <td>
+            <a href="{% url 'edit_member' member.id %}" class="btn btn-warning">Edit</a>
+            <button data-member-id="{{ member.id }}" class="btn btn-danger delete-member">Delete</button>
+          </td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="5">No members found.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <script src="{% static 'js/view_members.js' %}"></script>
+</div>
+{% endblock %}
