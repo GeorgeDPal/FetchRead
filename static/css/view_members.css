@@ -1,0 +1,97 @@
+body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    color: #000;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%; /* Make input elements 100% wide */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(192, 192, 192, 0.2); /* Slightly transparent gray */
+    color: #000; /* Black text */
+}
+
+button[type="submit"] {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Styles for the table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #333;
+    color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: rgba(192, 192, 192, 0.2);
+}
+
+/* Styles for buttons in table */
+.table .btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.table .btn-warning {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+.table .btn-danger {
+    background-color: #ff0000;
+    color: #fff;
+}

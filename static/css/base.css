@@ -1,0 +1,89 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0; /* Remove default margin */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-top: 20px; /* Space between header and list elements */
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px; /* Rounded corners for the links */
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+}
+
+nav a:hover {
+    background-color: #fff; /* Change background color to white on hover */
+    color: #000; /* Change text color to black on hover */
+}
+
+main {
+    max-width: 800px;
+    margin: 80px auto; /* Center the card in the main content */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Rounded corners for the card */
+    text-align: center; /* Center text inside the card */
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #fff;
+}
+
+/* Styles for the main content */
+h1, h2 {
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #000; /* Make card text black */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    /* Adjust styles for screens up to 768px wide */
+    main {
+        margin: 20px; /* Reduce margin for smaller screens */
+        padding: 10px;
+    }
+}

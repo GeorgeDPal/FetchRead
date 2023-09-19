@@ -1,0 +1,78 @@
+body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    color: #000;
+}
+
+#book-list {
+    margin-top: 20px;
+    max-width: 600px; /* Adjust the maximum width as needed */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    color: #000;
+}
+
+/* Styles for book list items (customize as needed) */
+.book-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+/* Add hover effect to book list items */
+.book-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the search form */
+#search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(192, 192, 192, 0.2); /* Slightly transparent gray */
+    color: #000; /* Black text */
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}

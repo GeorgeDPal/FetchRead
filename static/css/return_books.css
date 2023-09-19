@@ -1,0 +1,67 @@
+body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    color: #000;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(192, 192, 192, 0.2); /* Slightly transparent gray */
+    color: #000; /* Black text */
+}
+
+button[type="submit"] {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top:20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Styles for return status container */
+#return-status {
+    margin-top: 20px;
+    text-align: center;
+    color: #00ff00; /* Success message color */
+}
+
+/* Styles for error messages */
+.error {
+    color: #ff0000; /* Error message color */
+}
