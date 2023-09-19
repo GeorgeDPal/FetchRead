@@ -1,7 +1,5 @@
 # FetchRead
 # This is an assignment project, library management system using Frappe API.
 
-**
 #
-There is one error. The base.html template, that has links to navigate other pages. but the link doesn't redirects to other pages. help me to solve it 
-**
+There is an error with the base.html template; it contains links to navigate to other pages, but the links do not redirect to the intended destinations. Please help me solve this issue.
